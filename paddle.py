@@ -1,14 +1,15 @@
 from turtle import Turtle
 
 
-class Paddle(Turtle):
-    def __init__(self):
+class Paddle(Turtle):   # Paddle class inherited from Turtle class
+    def __init__(self, position):   # position as a parameter
         super().__init__()
+        # self represents the object that has been created from the class
         self.shape("square")
         self.color("white")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
-        self.goto(350, 0)
+        self.goto(position)
 
     def up(self):
         new_y = self.ycor() + 20
